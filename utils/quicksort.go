@@ -1,7 +1,5 @@
 package utils
 
-import "bytes"
-
 func QuickSort(w [][]byte) [][]byte {
 
 	if len(w) <= 1 {
@@ -19,7 +17,7 @@ func QuickSort(w [][]byte) [][]byte {
 			continue
 		}
 
-		if bytes.Compare(w[i], midEl) == 1 {
+		if Compare(w[i], midEl) == 1 {
 			greater = append(greater, w[i])
 		} else {
 			less = append(less, w[i])

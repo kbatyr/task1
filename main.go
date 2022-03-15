@@ -20,8 +20,8 @@ func main() {
 	words = u.QuickSort(words)
 
 	// count duplicated words
-	arr:= u.CountDuplicateWords(words)
-	
+	arr := u.CountDuplicateWords(words)
+
 	// sort frequency of words in descending order
 	sortArr := u.SortByFrequency(arr)
 
