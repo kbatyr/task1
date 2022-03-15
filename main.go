@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"io/ioutil"
 	"log"
 	u "task1/utils"
@@ -42,20 +41,9 @@ func main() {
 		}
 	}
 
-	// sort frequency of words in ascending order
+	// sort frequency of words in descending order
 	sortArr := sortByFrequency(arr)
 
 	// print 20 most frequently used words
-	for i, v := range sortArr {
-		if i == 20 {
-			break
-		}
-
-		sp := "   "
-		if v.freq < 1000 {
-			sp = "    "
-		}
-
-		fmt.Printf("%s%d %s\n", sp, v.freq, v.word)
-	}
+	printTopWords(sortArr)
 }
